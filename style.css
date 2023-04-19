@@ -1,0 +1,165 @@
+
+
+/*Hier werden alle Styles zu den enzelnen HTML-Elementen vergeben */
+
+
+body {
+    background-color: #949090;
+    font-family: Arial, sans-serif;
+  }
+  
+  
+  button {
+    background-color: #ff3e17;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+  }
+
+  input[type="text"] {
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px #aaa;
+  }
+  
+ /* Dieser Abschnitt wwäre das Design für die Tabelle der Device Features gewesen 
+  .table {
+    border-collapse: collapse;
+    border: 1px solid black;
+    width: 100%;
+    margin: 10px;
+    font-size: 16px;
+  }
+  
+   th, td {
+    text-align: left;
+    border: 1px solid black;
+    padding: 8px;
+    border-collapse: collapse;
+  }
+  
+  .table th {
+    background-color: #ff3e17;
+    color: white;
+  }
+  
+  .table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .df {
+    border: 2px solid black; 
+    border-radius: 10px;
+    padding: 20px; 
+    text-align: center; 
+    margin: auto; 
+    width: 50%;
+    position: relative; 
+  }
+  */
+
+  .install {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+  }
+
+  .dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+  }
+
+  .errorclass {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+  }
+
+  #t2 {
+    background-color: #ff3e17;
+    color: #f1f1f1;
+    
+  }
+
+  #errorcode {
+    color: red;
+    font-weight: bold;
+  }
+
+  #errorapi {
+    color: red;
+    font-weight: bold;
+  }
+
+  .license {
+    background-color: dimgrey;
+    text-align: center;
+  }
+
+  #c {
+    color: black;
+  }
+
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .input-group label {
+    margin-bottom: 5px;
+  }
+  
+  .input-group input[type="text"] {
+    background-color: #f1f1f1;
+    color: black;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .input-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin-bottom: 10px;
+  }
+  .input-group2-label {
+    text-align: center;
+  }
+  input[type="text"] {
+    background-color: #f1f1f1;
+    color: black;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    font-size: 16px;
+  }  
+ 
+  
+

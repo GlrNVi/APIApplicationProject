@@ -1,0 +1,136 @@
+<html>
+    <head>
+        <!-- Füge ein Logo hinzu -->
+        <img src = "C:\Users\glrn\Downloads\Viessmann_Developer-Portal_Logo_RGB_vertical_dark-grey.png" alt="Logo" width="400" height="200">
+     
+         <!-- Verlinke eine JavaScript-Datei -->
+        <script src = "projectservice.js"> </script> 
+
+        <!-- Verlinke eine CSS-Datei -->
+        <link rel="stylesheet" href="style.css">  
+
+    </head>
+    <body > 
+       
+        <div class = "class1">
+            <p id = "description"> Dieses Tool dient zur vereinfachten Darstellung der im Dashboard angezeigten API-Calls.</p>
+        </div>
+
+        <!-- Erstelle ein DIV mit der Klasse "install", um das System zu initialisieren -->
+        <div class  = "install">
+          
+            <button id = "idbt" onclick = "ausgabeID()">System initialisieren </button>
+            <p>Initialisiere dein System, damit die relevanten Parameter deines Geräts abgefragt und gespeichert werden. Diese sind für die Abfrage des Dashboards notwendig.</p>
+
+              <!-- Erstelle ein DIV mit der ID "iddiv" und einigen Eingabefeldern -->
+            <div id="iddiv">
+                <div class="input-group">
+                    <label for="gw">Gateway Serial:</label>
+                    <input id="gw" type="text" placeholder="Gateway Serial" disabled></input>
+                  </div>
+                  <div class="input-group">
+                    <label for="cid">Installation ID:</label>
+                    <input id="cid" type="text" placeholder="Installation ID" disabled></input>
+                  </div>
+                  <div class="input-group">
+                    <label for="dev">Device ID:</label>
+                    <input id="dev" type="text" placeholder="Device ID" disabled></input>
+                  </div>
+
+            </div>
+
+        </div>
+        
+        <br> 
+        <br> 
+
+         <!-- Erstelle ein DIV mit der Klasse "install", um die Datenpunkte anzeigen zu lassen -->
+        <div class = "dashboard">
+            
+
+            <button id = "b2" onclick = "ausgabeDB()">Lade Dashboard </button>
+            
+            <p>Initialisiere dein System, damit die relevanten Parameter deines Geräts abgefragt und gespeichert werden. Diese sind für die Abfrage des Dashboards notwendig.</p>
+
+        <div class = "input-box">
+            <div class="input-group2">
+                        <label for="mode">Modus:</label>
+                    <input id="mode" type="text" placeholder="Mode" disabled></input>
+                        <label for="program">Programm:</label>       
+                    <input id="program" type="text" placeholder="Program" disabled></input>
+                        <label for="dhwmode">DHW Modus:</label>
+                    <input id="dhwmode" type="text" placeholder="DHW Mode" disabled></input>
+              </div>
+            
+            <div class="input-group2">
+                          <label for="temperaturesupply">Vorlauftemperatur:</label>
+                    <input id="temperaturesupply" type="text" placeholder="Vorlauftemperatur " disabled></input>
+                            <label for="dhwtemperature">DHW Temperatur:</label>
+                    <input id="dhwtemperature" type="text" placeholder="DHW Temperatur" disabled></input>
+                            <label for="temperatureoutside">Außentemperatur:</label>
+                    <input id="temperatureoutside" type="text" placeholder="Außentemperatur" disabled></input>
+            </div>
+            
+            <div class="input-group2">
+                            <label for="temperaturereturn">Rücklauftemperatur:</label>
+                    <input id="temperaturereturn" type="text" placeholder="Rücklauftemperatur" disabled></input>
+                             <label for="compressor">Kompressor Laufzeit:</label>
+                    <input id="compressor" type="text" placeholder="Kompressor Laufzeit" disabled></input> 
+                              <label for="compressor2">Kompressor Starts:</label>
+                                  <input id="compressor2" type="text" placeholder="Kompressor Starts" disabled></input> 
+            </div>                       
+                               
+        </div>
+
+            <!-- Erstelle einen Button um die Funktion zur Speicherung der CSV-Datei abzurufen -->
+            <button id = "b4" onclick = "saveCSV()">Daten speichern</button>
+            <p>Speichere die Daten aus dem Dashboard in eine .csv Datei, um sie als Datenbank zu sichern und anschließend mittels Visualisierungstool darstellen zu können.</p>
+            
+        </div>
+
+        <br> 
+        <br> 
+
+        <!-- Erstelle einen Container um alle Fehler abzufangen-->
+        <div class="errorclass">
+            <p id= "t2"> Error Handling </p>
+            <br>
+            Sollten Fehler auftreten, werde diese hier angezeigt. Falls "undefined" angezeigt wird, lade dein Dashboard neu, um den Fehler anzuzeigen. Wird der Fehler nur kurz angezeigt dann refreshe die Seite.
+            <br>
+            <br>
+            <p id="errorcode"> </p>
+            <br>
+            <p id="errorapi"> </p>
+         </div>
+
+        <div class="license">
+            <p id="c">Copyright Nils Gellert - Viessmann Shared Service GmbH</p>
+        </div> 
+        
+       
+          <!----  <div class = "df"> 
+            Dieser Container würde die Device Features in einer Tabelle anzeigen
+
+            <button id = "b3" onclick = "ausgabeDF()">Ausgabe Device Features</button>
+            <p>Ihre Device Features:</p>
+            <p id="features"></p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nummer</th>
+                        <th>Feature</th>
+                        <th>URI</th>
+                    </tr>
+                </thead>
+                <tbody id="featurelist">
+                </tbody>
+            </table>
+        </div> -->   
+
+        
+
+
+
+    </body>
+</html>
