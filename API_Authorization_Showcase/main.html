@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>API-Showcase</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="main.js"></script>
+</head>
+
+
+<body>
+
+<div class="grosseBoxen">
+
+    <div class="innerErsteBox">
+
+        <div class="input-container2stueck">
+            <label for="clientID" class="input-labels">Client-ID</label>
+            <input type="text" id="clientID" class="input-fields" required minlength="20" maxlength="40"
+                   placeholder="Input"/>
+        </div>
+        <!--
+        <div class="jaNeinContainer">
+            <label for="simulatorYesNo" class="input-labels">Simulator? (YES/NO)</label>
+            <input type="text" id="simulatorYesNo" class="input-fields" required minlength="20" maxlength="40"
+                   placeholder="Input"/>
+        </div>
+        -->
+        <div class="input-container2stueck">
+            <label for="redirectURI" class="input-labels">Redirect-URI</label>
+            <input type="text" id="redirectURI" class="input-fields" required minlength="20" maxlength="100"
+                   placeholder="Input"/>
+        </div>
+    </div>
+
+    <div>
+        <button type="button" id="buttenErsteAutorisierung" class="autorisierungsButtons"
+                onclick="ersteSchrittAutorisierung()">1. Authentication step
+        </button>
+    </div>
+
+</div>
+
+
+<div class="grosseBoxen">
+    <div class="input-container">
+        <label for="autorisierungsCode" class="input-labels">Please copy the error code from the PopUp-window </label>
+        <input type="text" id="autorisierungsCode" class="output-fields" required minlength="20" maxlength="50"
+               placeholder="Authorization Code" disabled/>
+    </div>
+    <div>
+        <button type="button" id="buttenZweiteAutorisierung" class="autorisierungsButtons"
+                onclick="zweiterSchrittAutorisierung()">2. Authentication step
+        </button>
+    </div>
+</div>
+
+
+<div class="grosseBoxen">
+    <h5>Gained data</h5>
+    <div class="innerErsteBox">
+        <div class="input-container2stueck">
+            <label for="refreshTokenDarstellung" class="input-labels">Your Refresh Token</label>
+            <input type="text" id="refreshTokenDarstellung" class="output-fields"
+                   placeholder="Please do the second step first" disabled/>
+        </div>
+        <div class="input-container2stueck">
+            <label for="accessTokenDarstellung" class="input-labels">Your Access Token</label>
+            <input type="text" id="accessTokenDarstellung" class="output-fields"
+                   placeholder="Please do the second step first" disabled/>
+        </div>
+    </div>
+    <h6 id="authorizationFinished"><span style="text-decoration: underline">Authorization finished</span> &#x2714;</h6>
+</div>
+
+
+<div class="grosseBoxen">
+    <button disabled type="button" id="buttonIDsEmpfangen" class="autorisierungsButtons"
+            onclick="dritterSchrittIDsEmpfangen()" style="margin-bottom: 3vh">Receive important IDs
+    </button>
+    <div class="innerErsteBox">
+        <div class="input-container2stueck">
+            <label for="installationIDDarstellung" class="input-labels">Installation-ID</label>
+            <input type="text" id="installationIDDarstellung" class="output-fields"
+                   placeholder="Finish second step + Press Button" disabled/>
+        </div>
+        <div class="input-container2stueck">
+            <label for="deviceIDDarstellung" class="input-labels">Device-ID</label>
+            <input type="text" id="deviceIDDarstellung" class="output-fields"
+                   placeholder="Finish second step + Press Button" disabled/>
+        </div>
+        <div class="input-container2stueck">
+            <label for="gatewaySerialDarstellung" class="input-labels">Gateway-Serial</label>
+            <input type="text" id="gatewaySerialDarstellung" class="output-fields"
+                   placeholder="Finish second step + Press Button" disabled/>
+        </div>
+    </div>
+</div>
+
+
+<div class="grosseBoxen">
+    <button  type="button" id="buttonDatenEmpfangen" class="autorisierungsButtons"
+            onclick="vierterSchrittDatenEmpfangen()" style="margin-bottom: 3vh">Receive data
+    </button>
+    <div class="innerErsteBox">
+        <div class="input-container2stueck">
+            <label for="boilerTempMainDarstellung" class="input-labels">Boiler Temperature</label>
+            <input type="text" id="boilerTempMainDarstellung" class="output-fields"
+                   placeholder="Receive IDs + Press Button" disabled/>
+        </div>
+        <div class="input-container2stueck">
+            <label for="boilerTempTargetDarstellung" class="input-labels">Boiler Target Temperature</label>
+            <input type="text" id="boilerTempTargetDarstellung" class="output-fields"
+                   placeholder="Receive IDs + Press Button" disabled/>
+        </div>
+    </div>
+    <div class="trennstrich"></div>
+    <div class="innerErsteBox">
+        <div class="input-container2stueck" id="operatingMode">
+            <label for="modeDarstellung" class="input-labels">Current operating Mode</label>
+            <input type="text" id="modeDarstellung" class="output-fields"
+                   placeholder="Receive IDs + Press Button" disabled/>
+        </div>
+    </div>
+    <h5 style="margin-top: 0.7vh">Change operating modes</h5>
+    <div class="innerErsteBox">
+        <button type="button" id="buttondhw" class="modeButtons"
+                onclick="setMode('dhw')">DHW
+        </button>
+        <button type="button" id="buttondhwAndHeating" class="modeButtons"
+                         onclick="setMode('dhwAndHeating')">DHW and Heating
+        </button>
+    </div>
+    <div class="innerErsteBox" >
+        <button type="button" id="buttonForcedNormal" class="modeButtons"
+                onclick="setMode('forcedNormal')">Forced Normal
+        </button>
+        <button type="button" id="buttonStandby" class="modeButtons"
+                onclick="setMode('standby')">Standby
+        </button>
+        <button type="button" id="buttonForcedReduced" class="modeButtons"
+                onclick="setMode('forcedReduced')">Forced Reduced
+        </button>
+    </div>
+    <p id="timer" style="margin-top: 1.2vh; margin-bottom: -0.2vh">Last update before: 0 min 0.0 sec</p>
+
+
+</div>
+
+
+</body>
+
+
+</html>
